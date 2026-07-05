@@ -1,0 +1,20 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^powershell -NoProfile -Command \"Get-Content slug\\\\gioithieu\\\\script_general_gioithieu\\.js \\| Select-Object -Index 240; Write-Output '---'; Get-Content slug\\\\gioithieu\\\\script_mobile_gioithieu\\.js \\| Select-Object -Index 240; Write-Output '---'; Get-Content slug\\\\hoinhapquocte\\\\script_general_hoinhapquocte\\.js \\| Select-Object -Index 240; Write-Output '---'; Get-Content slug\\\\hoinhapquocte\\\\script_mobile_hoinhapquocte\\.js \\| Select-Object -Index 240\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd /d c:\\\\xampp\\\\htdocs\\\\tour-view ; python - <<'PY'\nimport pathlib\npaths = \\[\n    'slug/gioithieu/script_general_gioithieu\\.js',\n    'slug/gioithieu/script_mobile_gioithieu\\.js',\n    'slug/hoinhapquocte/script_general_hoinhapquocte\\.js',\n    'slug/hoinhapquocte/script_mobile_hoinhapquocte\\.js',\n\\]\nfor p in paths:\n    pth = pathlib\\.Path\\(p\\)\n    if not pth\\.exists\\(\\):\n        print\\(f'MISSING \\{p\\}'\\)\n        continue\n    lines = pth\\.read_text\\(encoding='utf-8', errors='replace'\\)\\.splitlines\\(\\)\n    for i, line in enumerate\\(lines, start=1\\):\n        if 'iconURL' in line:\n            print\\(f'\\{p\\}:\\{i\\}:\\{line\\}'\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd /d c:\\\\xampp\\\\htdocs\\\\tour-view ; cmd\\.exe /c python -c \"from pathlib import Path; files=\\[Path\\('slug/gioithieu/script_general_gioithieu\\.js'\\), Path\\('slug/gioithieu/script_mobile_gioithieu\\.js'\\), Path\\('slug/hoinhapquocte/script_general_hoinhapquocte\\.js'\\), Path\\('slug/hoinhapquocte/script_mobile_hoinhapquocte\\.js'\\)\\]; import re; \nfor f in files:\n    text=f\\.read_text\\(encoding='utf-8',errors='replace'\\)\n    count=text\\.count\\('\"iconURL\": \"skin/'\\)\n    print\\(f\\.name, count\\)\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cmd\\.exe /c python -c \"from pathlib import Path; lines=Path\\('slug/gioithieu/script_general_gioithieu\\.js'\\)\\.read_text\\(encoding='utf-8',errors='replace'\\)\\.splitlines\\(\\); print\\(len\\(lines\\)\\); print\\(lines\\[239\\]\\); print\\(lines\\[240\\]\\); print\\(lines\\[241\\]\\); print\\(lines\\[242\\]\\)\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
