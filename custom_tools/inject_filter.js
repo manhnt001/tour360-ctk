@@ -70,12 +70,21 @@ TDV['PlayerAPI']['defineScript'](script);
     let p = path.join(__dirname, '..', file);
     if (fs.existsSync(p)) {
         let content = fs.readFileSync(p, 'utf8');
-        if (!content.includes('// --- 3DVISTA DYNAMIC FILTER ---')) {
+        
+        // Luôn luôn cập nhật: xóa bản cũ nếu có
+        if (content.includes('// --- 3DVISTA DYNAMIC FILTER ---')) {
+            const regex = /\/\/ --- 3DVISTA DYNAMIC FILTER ---[\s\S]*?\/\/ --- END 3DVISTA DYNAMIC FILTER ---/g;
+            content = content.replace(regex, "TDV['PlayerAPI']['defineScript'](script);");
+            // Sửa lỗi: Nếu thay thế tạo ra 2 lệnh defineScript thì xóa bớt 1
+            content = content.replace("TDV['PlayerAPI']['defineScript'](script);\nTDV['PlayerAPI']['defineScript'](script);", "TDV['PlayerAPI']['defineScript'](script);");
+            content = content.replace("TDV['PlayerAPI']['defineScript'](script);\r\nTDV['PlayerAPI']['defineScript'](script);", "TDV['PlayerAPI']['defineScript'](script);");
+        }
+        
+        // Tiêm bản mới
+        if (content.includes("TDV['PlayerAPI']['defineScript'](script);")) {
             content = content.replace("TDV['PlayerAPI']['defineScript'](script);", filterCode);
             fs.writeFileSync(p, content);
-            console.log(`[OK] Đã tiêm filter vào ${file}`);
-        } else {
-            console.log(`[SKIP] Filter đã tồn tại trong ${file}`);
+            console.log(`[OK] Đã tiêm filter MỚI NHẤT vào ${file}`);
         }
     }
 });

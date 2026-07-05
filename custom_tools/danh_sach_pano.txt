@@ -1,65 +1,51 @@
-=== DANH SÁCH PANORAMA (ĐÃ SẮP XẾP GỌN GÀNG) ===
-
-
---- Nhóm: 2 ---
-Tên: 2                         | ID: "panorama_E5AD4C9A_EED1_EAFC_41B5_7BB38FB5C392"
-
---- Nhóm: 3 ---
-Tên: 3                         | ID: "panorama_E5AB9A14_EED1_A9CB_41D7_4DFB72BE368A"
+=== DANH SÁCH PANORAMA (CẬP NHẬT TỰ ĐỘNG) ===
+Tổng số: 42 panorama
+Cập nhật lúc: 00:40:40 6/7/2026
 
 --- Nhóm: Khu vực chung ---
-Tên: Cổng                      | ID: "panorama_FFE8B907_F3AE_DFFE_41E6_0F87E91808DD"
+Tên: Cổng                           | ID: "panorama_FFE8B907_F3AE_DFFE_41E6_0F87E91808DD"
+Tên: Phòng khánh tiết               | ID: "panorama_EB510412_E41E_5CC4_41E6_F50A0EE851D8"
+Tên: Phòng truyền thống             | ID: "panorama_E1A4A187_EED3_7AD5_41E3_73B9F03EAF43"
+Tên: Phòng truyền thống             | ID: "panorama_E0753A1F_EED1_E9F4_41D9_8F421617E4CD"
 
---- Nhóm: Lối vào ---
-Tên: Lối vào                   | ID: "panorama_E5AC573A_EED1_A63C_41E0_490476E17B5D"
-Tên: Lối vào                   | ID: "panorama_E968ADFB_E41E_CF44_41DD_5DC8202DFD20"
+--- Nhóm: Nhóm P1 ---
+Tên: p1-2007-2020-1                 | ID: "panorama_E076DBB8_EED2_EE3C_41E4_CCEE7624E8E8"
+Tên: p1-1975-1986-1                 | ID: "panorama_E077FCE5_EED3_EA54_41EB_C5CD086BC9F7"
+Tên: p1-1994-2006-1                 | ID: "panorama_E0774923_EED2_ABCC_41EA_11C5B4B64237"
+Tên: p1-2021-nay-1                  | ID: "panorama_E0753DEA_EED1_6A5C_41C5_D2FD63AD3641"
+Tên: p1-1987-1993-1                 | ID: "panorama_E077A5A2_EED3_BACF_41B8_AEDFF474E6CD"
+Tên: p1-1955-1975-1                 | ID: "panorama_E077C3F6_EED3_DE34_41ED_57E3C788AA03"
+Tên: p1-2021-nay-2                  | ID: "panorama_E0756A54_EED1_6E4B_41B0_2DD485D4D00C"
+Tên: p1-1994-2006-2                 | ID: "panorama_E076A5D5_EED2_BA74_41E5_A55E4DF18101"
+Tên: p1-2007-2020-2                 | ID: "panorama_E0768885_EED2_AAD5_41DA_90DF17168D56"
+Tên: p1-1955-1975-2                 | ID: "panorama_E0779076_EED3_FA34_41D6_EFF1E0C9848C"
+Tên: p1-1975-1986-2                 | ID: "panorama_E0778944_EED3_AA4B_41E1_7C855930893D"
+Tên: p1-2                           | ID: "panorama_E077EE12_EED3_69CF_41EB_6861A3FBEBA7"
+Tên: p1-1987-1993-2                 | ID: "panorama_E0769222_EED3_59CC_41CE_A48552B5B223"
+Tên: p1-1994-2006-3                 | ID: "panorama_E076C2EB_EED2_DE5D_41E6_0346220844D2"
+Tên: p1-2007-2020-3                 | ID: "panorama_E076D4E3_EED2_BA4C_41D4_D13DE2172553"
+Tên: p1-2021-nay-3                  | ID: "panorama_E07544A1_EED1_BACC_41DD_CAFB721931F4"
+Tên: p1-1987-1993-3                 | ID: "panorama_E0769EFF_EED3_6634_41EA_A5FCA97E52CF"
+Tên: p1-1987-1993-4                 | ID: "panorama_E076BC3E_EED3_6A34_41E1_F265B978E8ED"
+Tên: p1-2021-nay-4                  | ID: "panorama_E075CDA6_EED1_EAD7_41C1_98667D619E2C"
+Tên: p1-2007-2020-4                 | ID: "panorama_E0756174_EED1_5A34_41E1_B0E9E2200D5F"
+Tên: p1-16                          | ID: "panorama_E076FF69_EED2_E65C_41D2_15CE7E32527C"
+Tên: p1-23                          | ID: "panorama_E07577C2_EED1_A64F_41E4_3082F076BA3F"
+Tên: p1-28                          | ID: "panorama_E075C6E9_EED1_A65D_41C7_B244419CD50B"
+Tên: p1-1946-1954                   | ID: "panorama_E0778791_EED3_A6CC_41EB_E71F20A77868"
+Tên: p1-CoCauToChuc                 | ID: "panorama_E075011F_EED1_DBF4_41DF_AFD0C8C954FB"
+Tên: p1-khanhtiet                   | ID: "panorama_E077AB17_EED3_AFF4_41EA_CE874974B3CF"
 
---- Nhóm: p1 ---
-Tên: p1-2                      | ID: "panorama_E077EE12_EED3_69CF_41EB_6861A3FBEBA7"
-Tên: p1-3                      | ID: "panorama_E077AB17_EED3_AFF4_41EA_CE874974B3CF"
-Tên: p1-4                      | ID: "panorama_E0778791_EED3_A6CC_41EB_E71F20A77868"
-Tên: p1-5                      | ID: "panorama_E077C3F6_EED3_DE34_41ED_57E3C788AA03"
-Tên: p1-6                      | ID: "panorama_E0779076_EED3_FA34_41D6_EFF1E0C9848C"
-Tên: p1-7                      | ID: "panorama_E077FCE5_EED3_EA54_41EB_C5CD086BC9F7"
-Tên: p1-8                      | ID: "panorama_E0778944_EED3_AA4B_41E1_7C855930893D"
-Tên: p1-9                      | ID: "panorama_E077A5A2_EED3_BACF_41B8_AEDFF474E6CD"
-Tên: p1-10                     | ID: "panorama_E0769222_EED3_59CC_41CE_A48552B5B223"
-Tên: p1-11                     | ID: "panorama_E0769EFF_EED3_6634_41EA_A5FCA97E52CF"
-Tên: p1-12                     | ID: "panorama_E076BC3E_EED3_6A34_41E1_F265B978E8ED"
-Tên: p1-13                     | ID: "panorama_E0774923_EED2_ABCC_41EA_11C5B4B64237"
-Tên: p1-14                     | ID: "panorama_E076A5D5_EED2_BA74_41E5_A55E4DF18101"
-Tên: p1-15                     | ID: "panorama_E076C2EB_EED2_DE5D_41E6_0346220844D2"
-Tên: p1-16                     | ID: "panorama_E076FF69_EED2_E65C_41D2_15CE7E32527C"
-Tên: p1-17                     | ID: "panorama_E076DBB8_EED2_EE3C_41E4_CCEE7624E8E8"
-Tên: p1-18                     | ID: "panorama_E0768885_EED2_AAD5_41DA_90DF17168D56"
-Tên: p1-19                     | ID: "panorama_E076D4E3_EED2_BA4C_41D4_D13DE2172553"
-Tên: p1-20                     | ID: "panorama_E0756174_EED1_5A34_41E1_B0E9E2200D5F"
-Tên: p1-21                     | ID: "panorama_E0753DEA_EED1_6A5C_41C5_D2FD63AD3641"
-Tên: p1-22                     | ID: "panorama_E0756A54_EED1_6E4B_41B0_2DD485D4D00C"
-Tên: p1-23                     | ID: "panorama_E07577C2_EED1_A64F_41E4_3082F076BA3F"
-Tên: p1-24                     | ID: "panorama_E07544A1_EED1_BACC_41DD_CAFB721931F4"
-Tên: p1-25                     | ID: "panorama_E075011F_EED1_DBF4_41DF_AFD0C8C954FB"
-Tên: p1-26                     | ID: "panorama_E075CDA6_EED1_EAD7_41C1_98667D619E2C"
-Tên: p1-28                     | ID: "panorama_E075C6E9_EED1_A65D_41C7_B244419CD50B"
-
---- Nhóm: p2 ---
-Tên: p2-2                      | ID: "panorama_E806829D_E3AE_1395_41DE_9CF0DC7CF680"
-Tên: p2-3                      | ID: "panorama_E969F1FA_E41F_B745_41EC_233B512B6BD5"
-Tên: p2-4                      | ID: "panorama_E96AF01D_E41F_D4FF_41EC_2F0E514449A0"
-Tên: p2-5                      | ID: "panorama_E9691DE9_E41F_CF47_41C9_FA447E0403D0"
-Tên: p2-6                      | ID: "panorama_E96ADAFE_E41F_F53D_41DE_2BE52E38BE40"
-Tên: p2-7                      | ID: "panorama_E96917F8_E41F_DB45_41E7_F34E25B321D1"
-Tên: p2-8                      | ID: "panorama_E96944FF_E41F_BD3B_41E7_CF4E6ECC8DF3"
-Tên: p2-9                      | ID: "panorama_E96902AC_E41E_55DC_41EB_D195A96107BF"
-Tên: p2-10                     | ID: "panorama_E9697FCD_E41E_4B5C_4196_41130EC3DA75"
-Tên: p2-11                     | ID: "panorama_E9692F7A_E41E_4B44_41D6_8D25E916D5D3"
-Tên: p2-12                     | ID: "panorama_E9698F62_E41E_4B45_41EB_5EEE2DE14F4D"
-Tên: p2-13                     | ID: "panorama_E9691EAF_E41E_CDDC_41EA_9BF6E75B01BB"
-
---- Nhóm: Khu vực chung ---
-Tên: Phòng khánh tiết          | ID: "panorama_EB510412_E41E_5CC4_41E6_F50A0EE851D8"
-Tên: Phòng truyền thống        | ID: "panorama_E0753A1F_EED1_E9F4_41D9_8F421617E4CD"
-Tên: Phòng truyền thống        | ID: "panorama_E1A4A187_EED3_7AD5_41E3_73B9F03EAF43"
-
---- Nhóm: Sảnh ---
-Tên: Sảnh                      | ID: "panorama_E969EDC9_E41E_CF44_41E4_EC65FA688D0E"
+--- Nhóm: Nhóm P2 ---
+Tên: p2-khanhtiet                   | ID: "panorama_E9691DE9_E41F_CF47_41C9_FA447E0403D0"
+Tên: p2-PhanThuongCaoQuy-1          | ID: "panorama_E96917F8_E41F_DB45_41E7_F34E25B321D1"
+Tên: p2-SuQuanTamLanhDao-1          | ID: "panorama_E806829D_E3AE_1395_41DE_9CF0DC7CF680"
+Tên: p2-HoiNhapQuocTe-1             | ID: "panorama_E9697FCD_E41E_4B5C_4196_41130EC3DA75"
+Tên: p2-PhanThuongCaoQuy-2          | ID: "panorama_E96944FF_E41F_BD3B_41E7_CF4E6ECC8DF3"
+Tên: p2-HoiNhapQuocTe-2             | ID: "panorama_E9692F7A_E41E_4B44_41D6_8D25E916D5D3"
+Tên: p2-SuQuanTamLanhDao-2          | ID: "panorama_E969F1FA_E41F_B745_41EC_233B512B6BD5"
+Tên: p2-SuQuanTamLanhDao-3          | ID: "panorama_E96AF01D_E41F_D4FF_41EC_2F0E514449A0"
+Tên: p2-HoiNhapQuocTe--3            | ID: "panorama_E9698F62_E41E_4B45_41EB_5EEE2DE14F4D"
+Tên: p2-PhanThuongCaoQuy-3          | ID: "panorama_E96902AC_E41E_55DC_41EB_D195A96107BF"
+Tên: p2-6                           | ID: "panorama_E96ADAFE_E41F_F53D_41DE_2BE52E38BE40"
+Tên: p2-TongCucPhoCuc               | ID: "panorama_E9691EAF_E41E_CDDC_41EA_9BF6E75B01BB"

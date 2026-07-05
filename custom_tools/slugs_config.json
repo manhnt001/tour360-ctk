@@ -1,10 +1,63 @@
 {
-  "gioithieu": [
-    "panorama_E077AB17_EED3_AFF4_41EA_CE874974B3CF"
-  ],
-  "hoinhapquocte": [
-    "panorama_E9697FCD_E41E_4B5C_4196_41130EC3DA75",
-    "panorama_E9692F7A_E41E_4B44_41D6_8D25E916D5D3",
-    "panorama_E9698F62_E41E_4B45_41EB_5EEE2DE14F4D"
-  ]
+    "2007-2020": [
+        "panorama_E076DBB8_EED2_EE3C_41E4_CCEE7624E8E8",
+        "panorama_E0768885_EED2_AAD5_41DA_90DF17168D56",
+        "panorama_E076D4E3_EED2_BA4C_41D4_D13DE2172553",
+        "panorama_E0756174_EED1_5A34_41E1_B0E9E2200D5F"
+    ],
+    "1975-1986": [
+        "panorama_E077FCE5_EED3_EA54_41EB_C5CD086BC9F7",
+        "panorama_E0778944_EED3_AA4B_41E1_7C855930893D"
+    ],
+    "1994-2006": [
+        "panorama_E0774923_EED2_ABCC_41EA_11C5B4B64237",
+        "panorama_E076A5D5_EED2_BA74_41E5_A55E4DF18101",
+        "panorama_E076C2EB_EED2_DE5D_41E6_0346220844D2"
+    ],
+    "2021-nay": [
+        "panorama_E0753DEA_EED1_6A5C_41C5_D2FD63AD3641",
+        "panorama_E0756A54_EED1_6E4B_41B0_2DD485D4D00C",
+        "panorama_E07544A1_EED1_BACC_41DD_CAFB721931F4",
+        "panorama_E075CDA6_EED1_EAD7_41C1_98667D619E2C"
+    ],
+    "1987-1993": [
+        "panorama_E077A5A2_EED3_BACF_41B8_AEDFF474E6CD",
+        "panorama_E0769222_EED3_59CC_41CE_A48552B5B223",
+        "panorama_E0769EFF_EED3_6634_41EA_A5FCA97E52CF",
+        "panorama_E076BC3E_EED3_6A34_41E1_F265B978E8ED"
+    ],
+    "1955-1975": [
+        "panorama_E077C3F6_EED3_DE34_41ED_57E3C788AA03",
+        "panorama_E0779076_EED3_FA34_41D6_EFF1E0C9848C"
+    ],
+    "1946-1954": [
+        "panorama_E0778791_EED3_A6CC_41EB_E71F20A77868"
+    ],
+    "cocautochuc": [
+        "panorama_E075011F_EED1_DBF4_41DF_AFD0C8C954FB"
+    ],
+    "p1-khanhtiet": [
+        "panorama_E077AB17_EED3_AFF4_41EA_CE874974B3CF"
+    ],
+    "p2-khanhtiet": [
+        "panorama_E9691DE9_E41F_CF47_41C9_FA447E0403D0"
+    ],
+    "phanthuongcaoquy": [
+        "panorama_E96917F8_E41F_DB45_41E7_F34E25B321D1",
+        "panorama_E96944FF_E41F_BD3B_41E7_CF4E6ECC8DF3",
+        "panorama_E96902AC_E41E_55DC_41EB_D195A96107BF"
+    ],
+    "suquantamlanhdao": [
+        "panorama_E806829D_E3AE_1395_41DE_9CF0DC7CF680",
+        "panorama_E969F1FA_E41F_B745_41EC_233B512B6BD5",
+        "panorama_E96AF01D_E41F_D4FF_41EC_2F0E514449A0"
+    ],
+    "hoinhapquocte": [
+        "panorama_E9697FCD_E41E_4B5C_4196_41130EC3DA75",
+        "panorama_E9692F7A_E41E_4B44_41D6_8D25E916D5D3",
+        "panorama_E9698F62_E41E_4B45_41EB_5EEE2DE14F4D"
+    ],
+    "tongcucphocuc": [
+        "panorama_E9691EAF_E41E_CDDC_41EA_9BF6E75B01BB"
+    ]
 }

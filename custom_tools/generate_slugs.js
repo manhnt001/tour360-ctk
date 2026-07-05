@@ -1,10 +1,24 @@
 const fs = require('fs');
 const path = require('path');
 
-// Đường dẫn file cấu hình
-const configPath = path.join(__dirname, 'slugs_config.json');
+// 1. Tiêm bộ lọc động vào các file JS gốc
+console.log(`[1/5] Kiểm tra và khôi phục bộ lọc động...`);
+require('./inject_filter.js');
 
-// Đọc cấu hình
+// 2. Vô hiệu hóa AcademicWatermark trong tdvplayer.js
+console.log(`[2/5] Vô hiệu hóa AcademicWatermark...`);
+require('./patch_watermark.js')();
+
+// 3. Cập nhật danh sách panorama
+console.log(`[3/5] Cập nhật danh sách Panorama...`);
+require('./update_pano_list.js');
+
+// 4. Tự động nhóm các tour con
+console.log(`[4/5] Tự động tạo cấu hình tour con (slugs_config.json)...`);
+require('./auto_config.js');
+
+// Đọc cấu hình vừa được tạo
+const configPath = path.join(__dirname, 'slugs_config.json');
 let slugsConfig = {};
 try {
     if (fs.existsSync(configPath)) {
@@ -18,22 +32,20 @@ try {
     process.exit(1);
 }
 
-// 1. Tiêm bộ lọc động vào các file JS gốc (đề phòng trường hợp 3DVista vừa ghi đè)
-console.log(`[0/2] Kiểm tra và khôi phục bộ lọc động...`);
-require('./inject_filter.js');
-
-// 2. Tạo file slugs_config.js ở thư mục gốc cho trình duyệt đọc
+// 5. Tạo file slugs_config.js ở thư mục gốc cho trình duyệt đọc
 const jsConfigContent = `window.SLUGS_CONFIG = ${JSON.stringify(slugsConfig, null, 4)};`;
 fs.writeFileSync(path.join(__dirname, '../slugs_config.js'), jsConfigContent);
-console.log(`[1/2] Đã tạo file cấu hình slugs_config.js ở thư mục gốc.`);
+console.log(`[5/5] Đã xuất file slugs_config.js ra thư mục gốc.`);
 
-// 3. Tạo thư mục và index.html cho từng slug
-let indexHtml = fs.readFileSync(path.join(__dirname, '../index.htm'), 'utf8');
+// Xử lý index.htm gốc và tạo index.html cho từng slug
+let indexPath = path.join(__dirname, '../index.htm');
+let indexHtml = fs.readFileSync(indexPath, 'utf8');
 
-// Thêm thẻ base và nhúng script config
+// Thêm thẻ base và nhúng script config cho các tour con
 let baseHtml = indexHtml.replace(/<head>/i, '<head>\n    <base href="../../">');
 baseHtml = baseHtml.replace(/<script src="script\.js/i, '<script src="slugs_config.js?v=' + Date.now() + '"></script>\n    <script src="script.js');
 
+console.log(`\nĐang tạo các thư mục slug...`);
 for (const slug of Object.keys(slugsConfig)) {
     console.log(`Đang xử lý slug: ${slug}`);
 
@@ -48,4 +60,4 @@ for (const slug of Object.keys(slugsConfig)) {
     console.log(`  - Đã tạo: slug/${slug}/index.html`);
 }
 
-console.log("\n[THÀNH CÔNG] Hệ thống đã được tạo gọn gàng bằng Dynamic Filtering!");
+console.log("\n[THÀNH CÔNG] Hệ thống đã được tạo tự động 100%!");
