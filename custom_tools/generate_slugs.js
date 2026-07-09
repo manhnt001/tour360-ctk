@@ -5,13 +5,18 @@ const path = require('path');
 console.log(`[1/5] Kiểm tra và khôi phục bộ lọc động...`);
 require('./inject_filter.js');
 
-// 2. Vô hiệu hóa AcademicWatermark trong tdvplayer.js
-console.log(`[2/5] Vô hiệu hóa AcademicWatermark...`);
+// 2. Vô hiệu hóa AcademicWatermark và cấu hình xuất Audio Callback trong tdvplayer.js
+console.log(`[2/5] Cấu hình tdvplayer.js (AcademicWatermark & Audio Patch)...`);
 require('./patch_watermark.js')();
+require('./patch_audio.js')();
 
 // 3. Cập nhật danh sách panorama
 console.log(`[3/5] Cập nhật danh sách Panorama...`);
 require('./update_pano_list.js');
+
+// 3.5. Tự động tiêm HTML/CSS/JS của Custom Popup vào file index.htm gốc
+console.log(`[3.5/5] Tự động tiêm Custom Popup vào index.htm...`);
+require('./inject_popup_html.js')();
 
 // 4. Tự động nhóm các tour con
 console.log(`[4/5] Tự động tạo cấu hình tour con (slugs_config.json)...`);

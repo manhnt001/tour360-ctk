@@ -23,34 +23,30 @@ const slugs = {};
 for (const line of lines) {
     const match = line.match(/Tên:\s*(.*?)\s*\|\s*ID:\s*"(.*?)"/);
     if (!match) continue;
-    
+
     let name = match[1];
     let id = match[2];
-    
+
     // Bỏ qua "(Không có tên)"
     if (name.includes('(Không có tên)')) continue;
-    
+
     // Bỏ qua các phòng chung độc lập (nhưng giữ lại p1-khanhtiet, p2-khanhtiet)
     const lowerName = name.toLowerCase().trim();
     if (lowerName === 'cổng' || lowerName === 'phòng truyền thống' || lowerName === 'phòng khánh tiết' || lowerName === 'nền') continue;
-    
+
     // Bỏ qua các panorama chỉ có dạng p1-12, p2-6
     if (/^p[12]-\d+$/.test(name)) continue;
-    
-    // Trích xuất tên gốc (bỏ "p1-", "p2-"), giữ nguyên cho khanhtiet để tách 2 tour
-    let slugName = name;
-    if (!name.toLowerCase().includes('khanhtiet')) {
-        slugName = name.replace(/^p[12]-/, '');
-    }
-    
+
+    // Trích xuất tên gốc (bỏ "p1-", "p2-")
+    let slugName = name.replace(/^p[12]-/, '');
+
     // Bỏ các số thứ tự ở cuối (VD: -1, --3) nhưng giữ lại năm (VD: 1946-1954)
     // Các số index cuối thường là 1 chữ số.
-    slugName = slugName.replace(/-{1,2}[1-9]$/, ''); 
-    
+    slugName = slugName.replace(/-{1,2}[1-9]$/, '');
+
     // Chuẩn hóa tên slug
     let slug = slugName.toLowerCase().trim();
-    if (slug === 'cocautochuc') slug = 'cocautochuc'; // Không cần thiết nhưng để đảm bảo
-    
+
     if (!slugs[slug]) slugs[slug] = [];
     slugs[slug].push(id);
 }

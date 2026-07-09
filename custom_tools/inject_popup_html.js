@@ -1,84 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+const fs = require('fs');
+const path = require('path');
 
-<head>
-    <title>Tour 360 - Cục Thống Kê</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" id="metaViewport"
-        content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover"
-        data-tdv-general-scale="0.5" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <script src="lib/tdvplayer.js?v=1783621301518"></script>
-    <link rel="shortcut icon" href="favicon.ico?v=1783621301518">
-    <link rel="icon" sizes="48x48 32x32 16x16" href="favicon.ico?v=1783621301518">
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="misc/icon180.png?v=1783621301518">
-    <link rel="icon" type="image/png" sizes="16x16" href="misc/icon16.png?v=1783621301518">
-    <link rel="icon" type="image/png" sizes="32x32" href="misc/icon32.png?v=1783621301518">
-    <link rel="icon" type="image/png" sizes="192x192" href="misc/icon192.png?v=1783621301518">
-    <link rel="preload" href="locale/en.txt?v=1783621301518" as="fetch" crossorigin="anonymous" />
-    <link rel="preload" href="script.js?v=1783621301518" as="script" />
-    <link rel="preload" href="media/panorama_FFE8B907_F3AE_DFFE_41E6_0F87E91808DD_0/r/3/0_0.jpg?v=1783621301518"
-        as="image" />
-    <link rel="preload" href="media/panorama_FFE8B907_F3AE_DFFE_41E6_0F87E91808DD_0/l/3/0_0.jpg?v=1783621301518"
-        as="image" />
-    <link rel="preload" href="media/panorama_FFE8B907_F3AE_DFFE_41E6_0F87E91808DD_0/u/3/0_0.jpg?v=1783621301518"
-        as="image" />
-    <link rel="preload" href="media/panorama_FFE8B907_F3AE_DFFE_41E6_0F87E91808DD_0/d/3/0_0.jpg?v=1783621301518"
-        as="image" />
-    <link rel="preload" href="media/panorama_FFE8B907_F3AE_DFFE_41E6_0F87E91808DD_0/f/3/0_0.jpg?v=1783621301518"
-        as="image" />
-    <link rel="preload" href="media/panorama_FFE8B907_F3AE_DFFE_41E6_0F87E91808DD_0/b/3/0_0.jpg?v=1783621301518"
-        as="image" />
-    <meta name="description" content="Virtual Tour" />
-    <meta name="theme-color" content="#FFFFFF" />
-    <script src="script.js?v=1783621301518"></script>
-    <style type="text/css">
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-            height: 100vh;
-            width: 100vw;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+function injectPopupHtml() {
+    const file = path.join(__dirname, '../index.htm');
+    if (!fs.existsSync(file)) {
+        console.log("Không tìm thấy index.htm");
+        return;
+    }
+    let content = fs.readFileSync(file, 'utf8');
 
-        .fill-viewport {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        .fill-viewport.landscape-left {
-            left: env(safe-area-inset-left);
-        }
-
-        .fill-viewport.landscape-right {
-            right: env(safe-area-inset-right);
-        }
-
-        #viewer {
-            z-index: 1;
-        }
-
-        #preloadContainer {
-            z-index: 2;
-            opacity: 0;
-            background-color: rgba(255, 255, 255, 1);
-            transition: opacity 0.5s;
-            -webkit-transition: opacity 0.5s;
-            -moz-transition: opacity 0.5s;
-            -o-transition: opacity 0.5s;
-        }
-    </style>
-
+    const popupCss = `
     /* --- BẮT ĐẦU CUSTOM POPUP CSS --- */
     <style type="text/css">
         /* --- CSS cho Custom Popup --- */
@@ -212,22 +143,9 @@
             }
         }
     </style>
-    /* --- KẾT THÚC CUSTOM POPUP CSS --- */
-</head>
+    /* --- KẾT THÚC CUSTOM POPUP CSS --- */`;
 
-<body>
-    <div id="preloadContainer" class="fill-viewport">
-        <div
-            style="z-index: 4; position: absolute; overflow: hidden; left: 0%; top: 50%; width: 100.00%; height: 10.00%">
-            <div style="text-align:left; color:#000; ">
-                <DIV STYLE="text-align:center;font-size:1.6666666666666663vmin;"><SPAN
-                        STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#777777;font-size:1.67vmin;font-family:Arial, Helvetica, sans-serif;">Loading
-                        virtual tour. Please wait...</SPAN></DIV>
-            </div>
-        </div>
-    </div>
-    <div id="viewer" class="fill-viewport"></div>
-
+    const popupHtml = `
     <!-- Bắt đầu: Custom Audio Popup -->
     <div id="custom-audio-popup">
         <div class="popup-content">
@@ -237,8 +155,39 @@
             <button id="btn-enter-tour">Vào tham quan</button>
         </div>
     </div>
-    <!-- Kết thúc: Custom Audio Popup -->
-    <script src="custom_tools/custom_audio_popup.js"></script>
-</body>
+    <!-- Kết thúc: Custom Audio Popup -->`;
 
-</html>
+    const popupScript = '\n    <script src="custom_tools/custom_audio_popup.js"></script>\n';
+
+    // 1. Tiêm hoặc cập nhật CSS
+    if (content.includes('/* --- BẮT ĐẦU CUSTOM POPUP CSS --- */')) {
+        const cssRegex = /\/\* --- BẮT ĐẦU CUSTOM POPUP CSS --- \*\/[\s\S]*?\/\* --- KẾT THÚC CUSTOM POPUP CSS --- \*\//;
+        content = content.replace(cssRegex, popupCss.trim());
+    } else {
+        // Tiêm vào trước thẻ </head>
+        content = content.replace('</head>', popupCss + '</head>');
+    }
+
+    // 2. Tiêm hoặc cập nhật HTML
+    if (content.includes('<!-- Bắt đầu: Custom Audio Popup -->')) {
+        const htmlRegex = /<!-- Bắt đầu: Custom Audio Popup -->[\s\S]*?<!-- Kết thúc: Custom Audio Popup -->/;
+        content = content.replace(htmlRegex, popupHtml.trim());
+    } else {
+        // Tiêm vào trước thẻ </body>
+        content = content.replace('</body>', popupHtml + '</body>');
+    }
+
+    // 3. Tiêm hoặc cập nhật Script Link
+    if (!content.includes('src="custom_tools/custom_audio_popup.js"')) {
+        content = content.replace('</body>', popupScript + '</body>');
+    }
+
+    fs.writeFileSync(file, content, 'utf8');
+    console.log("[OK] Đã tiêm CSS, HTML và Script Link của Custom Popup vào index.htm gốc!");
+}
+
+module.exports = injectPopupHtml;
+
+if (require.main === module) {
+    injectPopupHtml();
+}
